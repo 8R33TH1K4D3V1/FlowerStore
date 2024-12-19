@@ -1,0 +1,623 @@
+:root {
+    --pink: #e84393;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: 0.2s linear;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+    overflow-x: hidden;
+}
+section {
+    padding: 2rem 9%;
+}
+
+/* Header */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: #fff;
+    padding: 2rem 9%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    box-shadow: 0.5rem 1rem rgba(0, 0, 0, 0.1);
+}
+
+header .logo {
+    font-size: 3rem;
+    color: #333;
+    font-weight: bolder;
+}
+
+header .logo span {
+    color: var(--pink);
+}
+
+header .navbar a {
+    font-size: 2rem;
+    padding: 0 1.5rem;
+    color: #666;
+}
+
+header .navbar a:hover {
+    color: var(--pink);
+}
+
+header .icons a {
+    font-size: 2.5rem;
+    color: #333;
+    margin-left: 1.5rem;
+}
+
+header .icons a:hover {
+    color: var(--pink);
+}
+
+/* Hide the checkbox toggle */
+header #toggler {
+    display: none;
+}
+
+/* Hamburger Icon */
+header .fa-bars {
+    font-size: 3rem;
+    color: #333;
+    border-radius: 0.5rem;
+    padding: 0.5rem 1.5rem;
+    cursor: pointer;
+    border: 1rem solid rgba(0, 0, 0, 0.3);
+    display: none; /* Initially hidden on larger screens */
+}
+.home {
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+    background: url(home_page.jpg) no-repeat;
+    background-size: cover; /* Optional: Ensures the image covers the entire area */
+    background-position: center; /* Optional: Centers the image */
+}
+.home .content
+{
+    max-width: 50rem;
+}
+.home .content h3
+{
+ font-size: 6rem;
+ color: #333;
+}
+.home .content span{
+    font-size:3.5rem ;
+    color:#702963;
+    padding:1rem 0;
+    line-height: 1.5;
+}
+.home .content p {
+    font-size: 1.5rem;
+    color: #333;
+    padding: 1rem 0;
+    line-height: 1.5;
+    font-weight: bold;
+    font-style: italic;
+     /* This will make the text bolder */
+}
+.btn
+{
+ display:inline-block;
+ margin-top:1 rem;
+ border-radius:5rem;
+ background:#eee;
+ padding: .9rem 3.5rem;
+ cursor: pointer;
+ font-size: 1.7rem;
+
+}
+.btn:hover
+{
+    background:	#FFA6C9;
+    .about {
+        background: rgba(255, 51, 153, 0.05); /* Very light pink shade */
+        padding: 2rem; /* Adds padding around the section */
+    }
+}
+.about {
+    background: rgba(255, 51, 153, 0.05); /* Light pink background for the whole content */
+    padding: 2rem;
+}
+
+.heading {
+    text-align: center;
+    font-size: 4rem;
+    color: #333;
+    padding: 1rem;
+    margin: 2rem 0;
+    background: rgba(255, 51, 153, 0.05); /* Light pink background for heading */
+}
+
+.heading span {
+    color: #000;
+}
+
+.about .row {
+    display: flex; /* Align content and video side by side */
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap; /* Ensure responsiveness */
+    padding: 2rem 0;
+    padding-bottom: 3rem;
+}
+
+.about .row .content {
+    flex: 1 1 40rem; /* Ensures content takes equal space */
+    text-align: left; /* Aligns text to the left */
+   /* Light pink background for content */
+    padding: 1rem;
+}
+
+.about .row .content h3 {
+    font-size: 2rem;
+    color: #000;
+}
+
+.about .row .content p {
+    font-size: 1.5rem;
+    color: #702963;
+    padding: 0.5rem 0;
+    padding-top: 1rem;
+    line-height: 1.5;
+    font-weight: bold; /* Makes the text bold */
+    font-style: italic; /* Makes the text italic */
+}
+
+.about .row .content .btn {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.75rem 1.5rem;
+    color: #702963;
+    text-decoration: none;
+    border: 0.1rem solid #000;  /* Added black border */
+    border-radius: 3rem;
+}
+
+
+.about .row .content .btn:hover {
+    background: #FF69B4; /* Pink color for hover */
+    color: #4c4747; /* Optional: change text color on hover */
+}
+
+.about .row .video-container {
+    flex: 1 1 40rem; /* Ensures video container takes equal space */
+    position: relative;
+    display: flex;
+    justify-content: center; /* Centers the video */
+}
+
+.about .row .video-container video {
+    width: 100%; /* Video takes full width of its container */
+    border-radius: 2rem;
+    object-fit: cover;
+}
+
+.about .row .video-container h3 {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.7rem; /* Reduced font size */
+    color: #333;
+    width:100%;
+    background: #fff;
+    padding: 0.5rem 1rem;
+    text-align: center;
+    border-radius: 0.5rem;
+    mix-blend-mode: screen;
+    box-shadow: 0.2rem 0.5rem rgba(0, 0, 0, 0.1); /* Optional: subtle shadow */
+}
+.icons-container {
+    background: rgba(255, 51, 153, 0.05);  /* Very light pink background */
+    display: flex;
+    justify-content: space-between;  /* Distributes the space between the items evenly */
+    flex-wrap: wrap;
+    gap: 1rem;  /* Reduced gap between items */
+    padding-top: 1rem;
+    line-height: 1.5;
+}
+
+.icons-container .icons {
+    background: #fff;
+    border: .1rem solid rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;  /* Reduced padding to make the icon area smaller */
+    align-items: center;
+    flex: 1 1 18%;  /* Adjusted to allow more icons to fit in one row */
+    text-align: center; /* Center content horizontally inside the icon */
+}
+
+.icons-container .icons img {
+    width: 80px;  /* Reduced width of the icon */
+    height: 80px; /* Reduced height of the icon */
+    object-fit: contain; /* Ensures the image scales without distortion */
+    margin-bottom: 1rem; /* Space between image and text */
+}
+
+.icons-container .icons h3 {
+    color: #333;
+    padding-bottom: .5rem;
+    font-size: 1.3rem;  /* Slightly smaller font size for better fit */
+}
+.icons-container .icons span{
+    color:#555;
+    font-size:1.5rem;
+
+}.products .box-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center; /* Center-align the boxes */
+}
+
+.products .box-container .box {
+    flex: 1 1 calc(33.33% - 1.5rem); /* Ensures 3 boxes fit in one row */
+    max-width: calc(33.33% - 1.5rem); /* Prevents the box from exceeding 1/3 of the container width */
+    box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
+    border-radius: 0.5rem;
+    border: 0.1rem solid rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.products .box-container .box .discount {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    padding: 0.7rem 1rem;
+    font-size: 1.2rem;
+    color: var(--pink);
+    background: rgba(255, 51, 153, 0.05);
+    z-index: 1;
+    border-radius: 0.5rem;
+}
+
+.products .box-container .box .image {
+    position: relative;
+    text-align: center;
+    padding-top: 2rem;
+    overflow: hidden;
+}
+
+.products .box-container .box .image img {
+    width: 100%; /* Ensures the image fills the container width */
+    height: 20rem; /* Ensures all images are the same height */
+    object-fit: contain; /* Prevents cropping and ensures the full image is visible */
+    background-color: #f8f8f8; /* Adds a subtle background to handle empty spaces */
+    border-radius: 0.5rem;
+}
+
+.products .box-container .box .image .icons {
+    position: absolute;
+    bottom: -3rem; /* Initially hide the icons below the box */
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    transition: bottom 0.3s ease; /* Add smooth animation for the hover effect */
+}
+
+.products .box-container .box:hover .image .icons {
+    bottom: 0; /* Bring the icons into view when hovering over the box */
+}
+
+
+.products .box-container .box .image .icons a {
+    height: 3rem;
+    line-height: 3rem;
+    font-size: 1.5rem;
+    width: 50%;
+    background-color: #f5d0de; /* Purple background */
+    color: #702963; /* White text/icons */
+    text-align: center;
+    text-decoration: none;
+    transition: all 0.3s ease; /* Smooth transition effect */
+}
+.products .box-container .box  .content
+{
+    padding:2rem;
+    text-align: center;
+
+}
+.products .box-container .box  .content h3{
+    font-size:1.5rem;
+    color:#333;
+}
+.products .box-container .box  .content .price{
+    font-size: 1.5rem;
+    color:var(--pink);
+    font-weight: bolder;
+    padding-top: 1rem;
+}
+.products .box-container .box  .content .price span{
+    font-size: 1.5rem;
+    color:#999;
+    font-weight: lighter;
+    text-decoration: line-through;
+
+}
+.products .box-container .box .image .icons .cart-btn {
+    border-left: 1rem solid rgba(255, 255, 255, 0.7);
+    border-right: 1rem solid rgba(255, 255, 255, 0.7);
+    width: 100%;
+}
+
+.products .box-container .box .image .icons a:hover {
+    background:#555; /* Darker purple on hover */
+    color: #ffffff; /* Ensure text remains white on hover */
+}
+
+.products .box-container .box .content {
+    text-align: center;
+    padding: 1rem;
+}
+
+.products .box-container .box .content .price span {
+    text-decoration: line-through;
+    color: rgba(0, 0, 0, 0.5);
+}
+:root {
+    --pink: #ff69b4; /* Strong pink */
+    --light-pink: #f5e4ea; /* Very light pink */
+}
+
+.review .box-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: space-between; /* Ensures items are spaced out */
+}
+
+.review .box-container .box {
+    flex: 1 1 calc(33.33% - 1.5rem); /* Ensures 3 boxes per row */
+    box-shadow: 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
+    border-radius: 5rem;
+    padding: 3rem 2rem;
+    position: relative;
+    background-color: var(--light-pink); /* Light pink background for all boxes */
+    text-align: center;
+}
+
+
+
+.review .box-container .box .stars i {
+    color: var(--pink); /* Ensure --pink is defined in your root */
+    font-size: 2rem;
+}
+
+.review .box-container .box p {
+    color: #4d4a4a;
+    font-size: 1.5rem;
+    padding-top: 2rem;
+}
+
+.review .box-container .box .user img {
+    height: 6rem;
+    width: 6rem;
+    object-fit: cover;
+    margin-right: 1rem;
+    border-radius: 2rem;
+}
+
+.review .box-container .box .user h3 {
+    font-size: 2rem;
+    color: #333;
+}
+
+.review .box-container .box .user {
+    display: flex;
+    align-items: center;
+    padding-top: 2rem;
+}
+.contact .row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem; /* Increased spacing for a cleaner layout */
+    align-items: center; /* Ensures alignment of elements */
+}
+
+.contact .row form {
+    flex: 1 1 40rem;
+    padding: 2.5rem;
+    box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1); /* Softer shadow */
+    border: 0.1rem solid rgba(0, 0, 0, 0.1);
+    background-color: #f5b4c9; /* Fixed typo in "background" */
+    border-radius: 0.8rem; /* Increased for smoother corners */
+    transition: transform 0.3s, box-shadow 0.3s; /* Adds subtle animation */
+}
+
+.contact .row form:hover {
+    transform: translateY(-5px); /* Slight lift on hover */
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15); /* Stronger hover shadow */
+}
+
+.contact .row form .box {
+    padding: 1.2rem;
+    font-size: 1.6rem;
+    color: #000;
+    border: 0.1rem solid rgba(0, 0, 0, 0.1);
+    border-radius: 0.5rem;
+    margin: 0.8rem 0;
+    width: 100%;
+    background-color:#f8f8f8; /* Light background for inputs */
+    transition: border-color 0.3s, box-shadow 0.3s; /* Subtle interaction */
+}
+
+.contact .row form .box:focus {
+    border-color: var(--pink);
+    box-shadow: 0 0 0.5rem rgba(255, 105, 180, 0.3); /* Glow effect */
+    outline: none; /* Removes default outline */
+}
+
+.contact .row form textarea {
+    height: 10rem; /* Increased height for usability */
+    resize: none;
+    font-family: inherit; /* Consistent font */
+}
+
+.contact .row .image {
+    flex: 1 1 50rem; /* Increased flex basis for larger size */
+    display: flex;
+    justify-content: center; /* Centers the image */
+    align-items: center;
+}
+
+.contact .row .image img {
+    width: 100%;
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 0.8rem; /* Slightly larger corner radius */
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15); /* Stronger shadow for emphasis */
+    object-fit: cover; /* Scales the image while cropping for a better fit */
+}
+.footer .box-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem; /* Fixed typo: no space between 1.5 and rem */
+}
+
+.footer .box-container .box {
+    flex: 1 1 25rem; /* Corrected the selector for the box */
+}
+
+.footer .box-container .box h3 {
+    color: #333;
+    font-size: 2.5rem;
+    margin-bottom: 1rem; /* Better spacing than padding on top and bottom */
+}
+
+.footer .box-container .box a {
+    display: block;
+    color: #666;
+    font-size: 1.5rem; /* Adjusted size for better proportions */
+    margin: 0.5rem 0; /* Replaced padding with margin for consistent spacing */
+    font-weight:bold;
+    transition: color 0.3s; /* Smooth hover effect */
+}
+
+.footer .box-container .box a:hover {
+    color: var(--pink);
+}
+
+.footer .box-container .box img {
+    margin-top: 1rem;
+    max-width: 100%; /* Ensures the image fits within its container */
+    height: auto; /* Maintains aspect ratio */
+    border-radius: 0.5rem; /* Optional: Rounded corners for better design */
+}
+
+.footer .credit {
+    text-align: center;
+    padding: 2rem 1.5rem; /* Consolidated padding values */
+    margin-top: 2rem; /* Slightly increased for better spacing */
+    font-size: 1.8rem; /* Adjusted font size for better readability */
+    color: #333;
+    border-top: 0.1rem solid rgba(0, 0, 0, 0.1);
+}
+
+.footer .credit span {
+    color: var(--pink);
+    font-weight: bold; /* Highlights the span content */
+}
+
+
+/* Media Queries */
+@media (max-width: 991px) {
+    html {
+        font-size: 55%;
+    }
+    header {
+        padding: 2rem;
+    }
+    section {
+        padding: 2rem;
+    }
+    .home{
+        background-position: left;
+    }
+    
+}
+
+
+@media (max-width: 768px) {
+    header .fa-bars {
+        display: block;
+    }
+
+    header .navbar {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        background: #eee;
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+        border-top: 0.1rem solid rgba(0, 0, 0, 0.1);
+        transition: clip-path 0.3s ease;
+    }
+    .contact .row {
+        flex-direction: column; /* Stacks items on small screens */
+    }
+    .contact .row form,
+    .contact .row .image {
+        flex: 1 1 100%; /* Full width on small screens */
+    }
+    
+    /* When the toggle checkbox is checked */
+    header #toggler:checked ~ .navbar {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+
+    header .navbar a {
+        margin: 1.5rem;
+        padding: 1.5rem;
+        background: #fff;
+        border: 0.1rem solid rgba(0, 0, 0, 0.1);
+        display: block;
+    }
+    .home .content h3
+    {
+      font-size:5rem;
+    }
+    .home .content span 
+    {
+        font-size: 2.5rem;
+
+    }
+    .icons-container .icons h3 {
+        font-size: 2rem;
+    }
+    .icons-container .icons span{
+      
+        font-size:1.7rem;
+    
+    }
+    
+}
+
+@media (max-width: 450px) {
+    html
+    {
+        font-size:50%;
+    }
+    .heading{
+        font-size: 3rem; ;
+    }
+
+}
